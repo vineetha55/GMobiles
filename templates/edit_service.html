@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'admin_nav.html' %}
+<div class="card">
+  <div class="card-header">
+    <h4>Manage Brands</h4>
+  </div>
+  <div class="card-body">
+  <form method="POST" action="/update_service/{{d.id}}" enctype="multipart/form-data">
+  {% csrf_token %}
+      <div class="row">
+        <!-- Brand Name -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="serviceName">Service Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="serviceName"
+              placeholder="Enter Service Name"
+              name="serviceName"
+              value="{{d.service_name}}"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="serviceSlug">Service Slug</label>
+            <input
+              type="text"
+              class="form-control"
+              id="serviceSlug"
+              name="serviceSlug"
+              value="{{d.service_slug}}"
+            />
+          </div>
+        </div>
+
+        <!-- Logo -->
+        {% if d.service_image %}
+        <div class="col-md-4">
+          <div class="form-group">
+            Currently<img src="{{d.service_image.url}}" width="100" height="100">
+            <label for="serviceImage">Service Image</label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="serviceImage"
+              name="serviceImage"
+
+            />
+          </div>
+        </div>
+
+{% else %}
+        <div class="col-md-4">
+          <div class="form-group">
+            Currently - No
+            <label for="serviceImage">Service Image</label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="serviceImage"
+              name="serviceImage"
+
+            />
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Submit Button -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Add Service</button>
+        </div>
+      </div>
+    </form>
+</body>
+</html>

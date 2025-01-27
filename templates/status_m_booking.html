@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'admin_nav.html' %}
+<div class="card">
+  <div class="card-header">
+    <h4>Manage Categories</h4>
+  </div>
+  <div class="card-body">
+<form method="POST" action="/save_m_status/{{data.id}}">
+  {% csrf_token %}
+  <div class="row">
+        <!-- Category Name -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="categoryName">Booking ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="bookingId"
+              name="bookingId"
+              value="{{data.id}}"
+              readonly
+            />
+          </div>
+        </div>
+
+        <!-- Slug -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select
+              class="form-control"
+              id="status"
+               name="status"
+            >
+                <option>Select a Status</option>
+                <option>Completed</option>
+                <option>Pending</option>
+                <option>Out For Delivery</option>
+            </select>
+          </div>
+        </div>
+
+
+        <!-- Submit Button -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Add Status</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

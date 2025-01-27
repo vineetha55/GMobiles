@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'admin_nav.html' %}
+<div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Product Updation</div>
+                  </div>
+                  {% if messages %}
+  <div>
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+{% endif %}
+                  <div class="card-body">
+                      <form method="POST" action="/update-product/{{b.id}}" enctype="multipart/form-data">
+                        {% csrf_token %}
+  <div class="row">
+    <!-- Product Name -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="productName"
+          placeholder="Enter Product Name"
+          name="productName"
+          value="{{b.name}}"
+        />
+      </div>
+    </div>
+
+    <!-- Product Slug -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productSlug">Product Slug</label>
+        <input
+          type="text"
+          class="form-control"
+          id="productSlug"
+          placeholder="Enter Product Slug"
+          name="productSlug"
+          value="{{b.slug}}"
+        />
+      </div>
+    </div>
+
+    <!-- Product Description -->
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="productDescription">Description</label>
+        <textarea
+          class="form-control"
+          id="productDescription"
+          rows="4"
+          placeholder="Enter Product Description"
+          name="productDescription"
+
+        >{{b.description}}</textarea>
+      </div>
+    </div>
+
+    <!-- Category -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productCategory">Category</label>
+        <select class="form-control" id="productCategory" name="productCategory">
+          <option value="{{b.category.id}}">{{b.category.name}}</option>
+            {% for i in category %}
+          <option value="{{i.id}}">{{i.name}}</option>
+            {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <!-- Brand -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productBrand">Brand</label>
+        <select class="form-control" id="productBrand" name="productBrand">
+          <option value="{{b.brand.id}}">{{b.brand.name}}</option>
+            {% for i in brand %}
+          <option value="{{i.id}}">{{i.name}}</option>
+         {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <!-- Price -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productPrice">Price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="productPrice"
+          name="productPrice"
+          value="{{b.price}}"
+        />
+      </div>
+    </div>
+
+    <!-- Stock -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productStock">Stock</label>
+        <input
+          type="number"
+          class="form-control"
+          id="productStock"
+           name="productStock"
+          value="{{b.stock}}"
+        />
+      </div>
+    </div>
+
+    <!-- Product Image -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        currently:<img src="{{b.image.url}}" width="100" height="100">
+        <label for="productImage">Product Image</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="productImage"
+          name="productImage"
+
+        />
+      </div>
+    </div>
+
+    <!-- Is Active -->
+    <div class="col-md-6 col-lg-4">
+      <div class="form-group">
+        <label for="productActive">Status</label>
+        <select class="form-control" id="productActive" name="productActive">
+          <option value="true">Active</option>
+          <option value="false">Inactive</option>
+        </select>
+      </div>
+    </div>
+<div class="col-md-12">
+                            <div class="form-group">
+                                <label>Attributes</label>
+                               <div id="attributes">
+    {% for attribute in attr %}
+    <div class="attribute row mb-2" data-id="{{ attribute.id }}">
+        <div class="col-5">
+            <input
+                type="text"
+                class="form-control"
+                name="keys[]"
+                value="{{ attribute.key }}"
+                placeholder="Attribute Key (e.g., Display)"
+                required>
+        </div>
+        <div class="col-5">
+            <input
+                type="text"
+                class="form-control"
+                name="values[]"
+                value="{{ attribute.value }}"
+                placeholder="Attribute Value (e.g., 6.7-inch AMOLED)"
+                required>
+        </div>
+        <div class="col-2">
+            <button
+                type="button"
+                class="btn btn-danger removeAttribute"
+                data-attribute-id="{{ attribute.id }}">
+                Remove
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+                                <button type="button" id="addAttribute" class="btn btn-secondary mt-2">Add Attribute</button>
+                            </div>
+                        </div>
+
+    <!-- Submit Button -->
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Update Product</button>
+    </div>
+  </div>
+                          </form>
+
+</div>
+<script>
+  // Add new attribute fields dynamically
+  document.getElementById('addAttribute').addEventListener('click', function () {
+    const attributesDiv = document.getElementById('attributes');
+    const newAttribute = document.createElement('div');
+    newAttribute.classList.add('attribute', 'row', 'mb-2');
+    newAttribute.innerHTML = `
+      <div class="col-5">
+        <input type="text" class="form-control" name="keys[]" placeholder="Attribute Key (e.g., Camera)" required>
+      </div>
+      <div class="col-5">
+        <input type="text" class="form-control" name="values[]" placeholder="Attribute Value (e.g., 48 MP)" required>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-danger removeAttribute">Remove</button>
+      </div>
+    `;
+    attributesDiv.appendChild(newAttribute);
+  });
+
+  // Remove an attribute field
+  document.getElementById('attributes').addEventListener('click', function (event) {
+    if (event.target.classList.contains('removeAttribute')) {
+      const attributeRow = event.target.closest('.attribute');
+      attributeRow.remove();
+    }
+  });
+</script>
+
+</body>
+</html>

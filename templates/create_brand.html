@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'admin_nav.html' %}
+<div class="card">
+  <div class="card-header">
+    <h4>Manage Brands</h4>
+  </div>
+  <div class="card-body">
+  <form method="POST" action="/save-brand/" enctype="multipart/form-data">
+  {% csrf_token %}
+      <div class="row">
+        <!-- Brand Name -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="brandName">Brand Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="brandName"
+              placeholder="Enter Brand Name"
+              name="brandName"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="brandSlug">Brand Slug</label>
+            <input
+              type="text"
+              class="form-control"
+              id="brandSlug"
+              name="brandSlug"
+            />
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="brandLogo">Brand Logo</label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="brandLogo"
+              name="brandLogo"
+            />
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="brandDescription">Description</label>
+            <textarea
+              class="form-control"
+              id="brandDescription"
+              rows="3"
+              placeholder="Enter Brand Description"
+              name="brandDescription"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Add Brand</button>
+        </div>
+      </div>
+    </form>
+</body>
+</html>
