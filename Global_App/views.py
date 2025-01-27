@@ -606,3 +606,23 @@ def update_service(request,id):
         data.save()
     return redirect("/manage_service/")
 
+def book_now(request,slug):
+    ser=Services.objects.get(service_slug=slug)
+    return render(request,"book_now.html",{"ser":ser})
+
+def submit_booking(request):
+    data=Service_Booking()
+    data.name=request.POST.get("name")
+    data.email=request.POST.get("email")
+    data.phone=request.POST.get("phone")
+    data.service_id=request.POST.get("service_id")
+    data.date=request.POST.get("date")
+    data.time=request.POST.get("time")
+    data.comments=request.POST.get("comments")
+    data.save()
+    return redirect("/")
+
+
+def bookings(request):
+    data=Service_Booking.objects.all()
+    return render(request,"bookings.html",{"data":data})

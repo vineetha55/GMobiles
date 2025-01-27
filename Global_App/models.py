@@ -125,4 +125,14 @@ class Services(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+class Service_Booking(models.Model):
+    service=models.ForeignKey(Services,on_delete=models.CASCADE,null=True)
+    name=models.CharField(max_length=100,null=True)
+    email=models.EmailField(null=True)
+    phone=models.IntegerField(null=True)
+    date=models.DateField(null=True)
+    time=models.TimeField(null=True)
+    comments=models.CharField(max_length=700,null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 

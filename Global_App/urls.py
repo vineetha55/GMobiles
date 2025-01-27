@@ -65,5 +65,8 @@ urlpatterns=[
     path("edit_service/<id>",views.edit_service,name="edit_service"),
     path("update_service/<id>",views.update_service,name="update_service"),
     path("delete_service/<id>",views.delete_service,name="delete_service"),
+    path("book_now/<slug>",views.book_now,name="book_now"),
+    path("submit-booking/",views.submit_booking,name="submit-booking"),
+    path("bookings/",views.bookings,name="bookings")
 
 ]
