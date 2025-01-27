@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+{% include 'admin_nav.html' %}
+<div class="container table-responsive">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+          <th>Service</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Preferred Date</th>
+          <th>Preferred Time</th>
+          <th>Comments</th>
+          <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td ><span class="badge bg-success" style="font-size:15px;">{{i.service.service_name}}</span></td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.phone }}</td>
+           <td>{{ i.date }}</td>
+            <td>{{ i.time }}</td>
+           <td>{{ i.comments }}</td>
+            <td>
+                <a href="https://wa.me/{{i.phone}}" class="btn btn-success">Chat</a>
+<!--                <a href="/cancel_service_booking/{{i.id}}" class="btn btn-danger">Cancel</a>-->
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">No Bookings available</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
 </body>
 </html>
