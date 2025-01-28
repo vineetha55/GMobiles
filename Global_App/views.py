@@ -256,7 +256,9 @@ def save_reg(request):
 
     reg.save()
     slug=request.POST.get("slug")
-    return render(request,"Login.html",{"slug":slug})
+    print("slug-",slug)
+    next_url = request.POST.get("next") or request.GET.get("next")
+    return render(request,"Login.html",{"slug":slug,"next_url":next_url})
 
 def Login(request):
     return render(request,"Login.html")
@@ -273,9 +275,12 @@ def login_check(request):
         print(next_url,"hh")
         cart=Cart.objects.filter(session_key=request.session.session_key)
         cart.update(user_id=request.session['userid'])
+        next=request.POST.get("next1")
         
         if next_url:
             return HttpResponseRedirect(next_url)
+        elif next:
+            return HttpResponseRedirect(next)
         else:
             return redirect("buy_now",slug=slug)
     else:

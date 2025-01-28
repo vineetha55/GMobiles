@@ -285,7 +285,7 @@ form {
         <h1>Login</h1>
         <div class="input-box">
           <input type="hidden" value="{{slug}}" name="slug">
-           <input type="hidden" name="next" value="{{ request.GET.next }}">
+           <input type="hidden" name="next1" value="{{ next_url }}">
           <input type="email" placeholder="Email" name="email" required>
           <i class='bx bxs-user'></i>
         </div>
@@ -311,6 +311,7 @@ form {
       <form action="/save_reg/" method="post" >{% csrf_token %}
         <h1>Registration</h1>
         <div class="input-box">
+          <input type="hidden" name="next" value="{{ request.GET.next }}">
           <input type="hidden" value="{{slug}}" name="slug">
           <input type="text" placeholder="Name" name="username" required>
           <i class='bx bxs-user'></i>
