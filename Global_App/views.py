@@ -261,7 +261,9 @@ def save_reg(request):
     return render(request,"Login.html",{"slug":slug,"next_url":next_url})
 
 def Login(request):
-    return render(request,"Login.html")
+    next_url = request.GET.get("next")
+    print(next_url)
+    return render(request,"Login.html",{"next_url":next_url})
 
 def login_check(request):
     slug = request.POST.get("slug")
@@ -276,13 +278,20 @@ def login_check(request):
         cart=Cart.objects.filter(session_key=request.session.session_key)
         cart.update(user_id=request.session['userid'])
         next=request.POST.get("next1")
+        print(next,"mm")
         
         if next_url:
+            print("first")
             return HttpResponseRedirect(next_url)
-        elif next:
-            return HttpResponseRedirect(next)
+
+        elif slug:
+            print("second")
+            return redirect("buy_now", slug=slug)
+
         else:
-            return redirect("buy_now",slug=slug)
+            print("third")
+            return HttpResponseRedirect(next)
+
     else:
         return render(request, "login.html", {"error": "Invalid email or password"})
 
