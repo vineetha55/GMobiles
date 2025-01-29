@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="159ea88f-3567-486d-aedd-0db8ad109d41" name="Changes" comment="28/1/25">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global_App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Global_App/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
-    </list>
+    <list default="true" id="159ea88f-3567-486d-aedd-0db8ad109d41" name="Changes" comment="29/1/25" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738057645515</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="29/1/25">
+      <created>1738125043760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738125043760</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +99,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="27/1/25" />
     <MESSAGE value="28/1/25" />
-    <option name="LAST_COMMIT_MESSAGE" value="28/1/25" />
+    <MESSAGE value="29/1/25" />
+    <option name="LAST_COMMIT_MESSAGE" value="29/1/25" />
   </component>
 </project>
