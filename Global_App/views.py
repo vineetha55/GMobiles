@@ -1,4 +1,5 @@
 import json
+from datetime import date
 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -41,7 +42,26 @@ def check_login(request):
 
 @login_required
 def dashboard(request):
-    return render(request,"dashboard.html")
+    customers=Registration.objects.all().count()
+    today1=Bookings.objects.filter(created_at=date.today()).count()
+    today2=Multi_Bookings.objects.filter(created_at=date.today()).count()
+    order_today=today2+today1
+    total1 = Bookings.objects.all().count()
+    total2 = Multi_Bookings.objects.all().count()
+    order_total=total1+total2
+    revenue1=Bookings.objects.all()
+    r1=0
+    for i in revenue1:
+        r1+=i.total_price
+    revenue2 = Multi_Bookings.objects.all()
+    r2 = 0
+    for i in revenue2:
+        r2 += i.total_price
+    total_revenue=r1+r2
+    return render(request,"dashboard.html",{"customers":customers,
+                                            "order_today":order_today,
+                                            "order_total":order_total,
+                                            "total_revenue":total_revenue})
 
 def logout_admin(request):
     logout(request)

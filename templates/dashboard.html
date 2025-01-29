@@ -10,7 +10,7 @@
     />
     <link
       rel="icon"
-      href="{% static 'assets/img/kaiadmin/favicon.ico' %}"
+      href="{% static 'images/global_logo.jpeg' %}"
       type="image/x-icon"
     />
 
@@ -635,8 +635,8 @@
                       </div>
                       <div class="col col-stats ms-3 ms-sm-0">
                         <div class="numbers">
-                          <p class="card-category">Visitors</p>
-                          <h4 class="card-title">1,294</h4>
+                          <p class="card-category">Customers</p>
+                          <h4 class="card-title">{{customers}}</h4>
                         </div>
                       </div>
                     </div>
@@ -656,8 +656,8 @@
                       </div>
                       <div class="col col-stats ms-3 ms-sm-0">
                         <div class="numbers">
-                          <p class="card-category">Subscribers</p>
-                          <h4 class="card-title">1,303</h4>
+                          <p class="card-category">Orders Today</p>
+                          <h4 class="card-title">{{order_today}}</h4>
                         </div>
                       </div>
                     </div>
@@ -677,8 +677,8 @@
                       </div>
                       <div class="col col-stats ms-3 ms-sm-0">
                         <div class="numbers">
-                          <p class="card-category">Sales</p>
-                          <h4 class="card-title">₹ 1,345</h4>
+                          <p class="card-category">Total Revenue</p>
+                          <h4 class="card-title">{{total_revenue}}</h4>
                         </div>
                       </div>
                     </div>
@@ -698,8 +698,8 @@
                       </div>
                       <div class="col col-stats ms-3 ms-sm-0">
                         <div class="numbers">
-                          <p class="card-category">Order</p>
-                          <h4 class="card-title">576</h4>
+                          <p class="card-category">Total Order</p>
+                          <h4 class="card-title">{{order_total}}</h4>
                         </div>
                       </div>
                     </div>
