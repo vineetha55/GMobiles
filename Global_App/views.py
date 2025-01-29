@@ -660,3 +660,7 @@ def submit_booking(request):
 def bookings(request):
     data=Service_Booking.objects.all()
     return render(request,"bookings.html",{"data":data})
+
+def all_users(request):
+    data=Registration.objects.all()
+    return render(request,"all_users.html",{"data":data})
