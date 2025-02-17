@@ -1,0 +1,109 @@
+{% include 'admin_nav.html' %}
+<div class="card">
+  <div class="card-header">
+    <h4>Update Profile</h4>
+  </div>
+  <div class="card-body">
+<body>
+    <div  >
+        <div >
+            <div class="col-md-10">
+                <div class="card p-4">
+             
+                    {% if messages %}
+                        <div class="alert alert-danger">
+                            {% for msg in messages %}
+                                {{ msg }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    
+                    <form action="{% url 'bnb' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <label class="form-label">Logo</label>
+                                <input name="photo" type="file" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" value="{{bb1.First_name}}" name="first" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" value="{{bb1.Last_name}}" name="last" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">User Name</label>
+                                <input type="text" class="form-control" value="{{um.username}}" name="user_name" required>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-3">
+                            <div class="col-md-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" value="{{bb1.Email}}" name="em" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">GST Number</label>
+                                <input type="text" class="form-control" value="{{bb1.gst_num}}" name="gst_num" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Mobile Number</label>
+                                <input type="text" class="form-control" value="{{bb1.Mobile_Number}}" name="mn" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Address</label>
+                                <textarea name="addr" class="form-control" required>{{ bb1.address }}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Current Password</label>
+                                <input type="text" class="form-control" value="{{bb1.Password}}" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">New Password</label>
+                                <input name="psw" type="password" class="form-control" id="newPassword" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Re-enter New Password</label>
+                                <input name="psw_confirm" type="password" class="form-control" id="renewPassword" required>
+                                <small id="passwordHelp" class="form-text"></small>
+                            </div>
+                        </div>
+                        <br>
+                        <div >
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("newPassword").addEventListener("input", validatePassword);
+        document.getElementById("renewPassword").addEventListener("input", validatePassword);
+
+        function validatePassword() {
+            let newPassword = document.getElementById("newPassword").value;
+            let renewPassword = document.getElementById("renewPassword").value;
+            let passwordHelp = document.getElementById("passwordHelp");
+            
+            if (newPassword && renewPassword) {
+                if (newPassword === renewPassword) {
+                    passwordHelp.textContent = "Passwords match!";
+                    passwordHelp.style.color = "green";
+                } else {
+                    passwordHelp.textContent = "Passwords do not match.";
+                    passwordHelp.style.color = "red";
+                }
+            } else {
+                passwordHelp.textContent = "";
+            }
+        }
+    </script>   </body>
+</html>

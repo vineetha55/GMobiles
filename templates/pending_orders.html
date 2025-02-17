@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%include 'admin_nav.html' %}
+ <div class="container mt-5 table-responsive">
+        <h2 class="mb-4">Multiple Product Bookings</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Sub Total</th>
+                    <th>Delivery</th>
+                    <th>Total Price</th>
+                    <th>Payment Method</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in k1 %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                 <td>{{ product.ship_add.firstname }}&nbsp;&nbsp;{{ product.ship_add.lastname }}</td>
+                    <td>{{ product.ship_add.street_address }}</td>
+                    <td>{{ product.ship_add.phone }}</td>
+                    <td>{{ product.sub_total }}</td>
+                    <td>{{ product.delivery }}</td>
+                    <td>{{ product.total_price }}</td>
+                    <td>Cash On Delivery</td>
+                    <td>
+                        <a href="/status_m_booking/{{product.id}}" class="btn btn-sm btn-warning m-1">Update Status</a>
+                        <a href="/view_checkout_products/{{product.id}}" class="btn btn-sm btn-warning m-1">View Product</a>
+                        <a href="/cancel_m_booking/{{product.id}}" class="btn btn-sm btn-danger"
+                           onclick="return confirm('Are you sure you want to cancel this order?');">Cancel</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="8" class="text-center">No Orders found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+       <h2 class="mb-4">Single Product Bookings</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                     <th>Order At</th>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                     <th>Quantity</th>
+                    <th>Sub Total</th>
+                    <th>Delivery</th>
+                    <th>Total Price</th>
+                    <th>Payment Method</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in k %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ product.created_at }}</td>
+                    <td><img src="{{ product.product.image.url }}" width="100" height="100"></td>
+                    <td>{{ product.ship_add.firstname }}&nbsp;&nbsp;{{ product.ship_add.lastname }}</td>
+                    <td>{{ product.ship_add.street_address }}</td>
+                    <td>{{ product.ship_add.phone }}</td>
+                    <td>₹{{ product.quantity }}</td>
+                    <td>{{ product.sub_total }}</td>
+                    <td>{{ product.delivery }}</td>
+                    <td>{{ product.total_price }}</td>
+                    <td>Cash On Delivery</td>
+                    <td>
+                        <a href="/status_booking/{{product.id}}" class="btn btn-sm btn-warning m-1">Update Status</a>
+                        <a href="/cancel_booking/{{product.id}}" class="btn btn-sm btn-danger"
+                           onclick="return confirm('Are you sure you want to Cancel this Order?');">Cancel</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="8" class="text-center">No Orders found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+

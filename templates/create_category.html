@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'admin_nav.html' %}
+<div class="card">
+  <div class="card-header">
+    <h4>Manage Categories</h4>
+  </div>
+  <div class="card-body">
+<form method="POST" action="/save-category/">
+  {% csrf_token %}
+  <div class="row">
+        <!-- Category Name -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="categoryName">Category Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="categoryName"
+              placeholder="Enter Category Name"
+              name="categoryName"
+            />
+          </div>
+        </div>
+
+        <!-- Slug -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="categorySlug">Slug</label>
+            <input
+              type="text"
+              class="form-control"
+              id="categorySlug"
+              placeholder="Enter Category Slug"
+               name="categorySlug"
+            />
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="categoryDescription">Description</label>
+            <textarea
+              class="form-control"
+              id="categoryDescription"
+              rows="3"
+              placeholder="Enter Category Description"
+              name="categoryDescription"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Add Category</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

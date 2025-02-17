@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Global Mobiles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body class="goto-here">
+	{% include 'navbar.html' %}
+    <!-- END nav -->
+
+    <!-- <section id="home-section" class="hero">
+<div class="home-slider js-fullheight owl-carousel">
+    <div class="slider-item js-fullheight">
+        <div class="overlay"></div>
+        <div class="container-fluid p-0">
+            <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                <div class="one-third order-md-last img js-fullheight" style="background-image:url({% static 'images/front1.jpg' %});">
+                </div>
+                <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                    <div class="text">
+                        <span class="subheading">Global Mobiles</span>
+                        <div class="horizontal">
+                            <h3 class="vr" style="background-image: url({% static 'images/divider.jpg' %});">Serving Since 2010</h3>
+                            <h1 class="mb-4 mt-3">Find Your <br><span>Perfect Smartphone</span></h1>
+                            <p>Explore the latest smartphones, gadgets, and accessories all in one place. Your ultimate mobile shop experience starts here.</p>
+                            <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Discover Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-item js-fullheight">
+        <div class="overlay"></div>
+        <div class="container-fluid p-0">
+            <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                <div class="one-third order-md-last img js-fullheight" style="background-image:url({% static 'images/front2.jpg' %});">
+                </div>
+                <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                    <div class="text">
+                        <span class="subheading">Global Mobiles</span>
+                        <div class="horizontal">
+                            <h3 class="vr" style="background-image: url({% static 'images/divider.jpg' %});">Your Trusted Mobile Partner</h3>
+                            <h1 class="mb-4 mt-3">Upgrade to the <span>Future</span></h1>
+                            <p>Stay ahead with the latest mobile technology and unbeatable prices. Shop the best deals on premium smartphones and accessories.</p>
+                            <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Shop Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+   <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/video_pic2.jpg' %});">
+                <a href="{% static 'images/video1.mp4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+                    <span class="icon-play"></span>
+                </a>
+            </div>
+            <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+                <div class="heading-section-bold mb-4 mt-md-5">
+                    <div class="ml-md-0">
+                        <h2 class="mb-4">Discover the Future with Global Mobiles</h2>
+                    </div>
+                </div>
+                <div class="pb-md-5">
+                    <p>At Global Mobiles, we bring you the latest smartphones, gadgets, and accessories designed to enhance your lifestyle. Experience unparalleled technology and unbeatable service all in one place.</p>
+                    <div class="row ftco-services">
+                        <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+                            <div class="media block-6 services">
+                                <div class="icon d-flex justify-content-center align-items-center mb-4">
+                                    <span class="flaticon-002-recommended"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="heading">Exchange Offers</h3>
+                                    <p>Trade in your old phone and upgrade to the latest models at unbeatable prices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+                            <div class="media block-6 services">
+                                <div class="icon d-flex justify-content-center align-items-center mb-4">
+                                    <span class="flaticon-001-box"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="heading">Secure Packaging</h3>
+                                    <p>Your new smartphone is delivered with care, ensuring it arrives in perfect condition.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+                            <div class="media block-6 services">
+                                <div class="icon d-flex justify-content-center align-items-center mb-4">
+                                    <span class="flaticon-003-medal"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="heading">Top Brands</h3>
+                                    <p>Choose from a wide range of premium smartphones from the world's leading brands.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+<section id="home-section" class="hero">
+  <div class="home-slider js-fullheight owl-carousel">
+    <!-- Slider Item 1 -->
+    <div class="slider-item js-fullheight">
+      <div class="background" style="background-image: url('https://stg-images.samsung.com/is/image/samsung/assets/za/smartphones/galaxy-s24-ultra/images/hotfix4/galaxy-s24-ultra-highlights-color-titanium-yellow-back-mo.jpg?imbypass=true'); filter: brightness(25%); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+      <div class="overlay"></div>
+      <div class="container h-100 d-flex align-items-center justify-content-center">
+        <div class="text-center text-light ftco-animate">
+          <span class="subheading" style="background-color: white; border-radius: 50px; color: rgb(131, 84, 84);"></span>
+          <h1 class="mb-4 mt-3" style="color:white;">Global <span>Mobiles</span></h1>
+          <p>Explore the latest smartphones, gadgets, and accessories all in one place. Your ultimate mobile shop experience starts here.</p>
+          <p><a href="#" class="btn btn-primary px-5 py-3 mt-3" style="background-color: #2288ca;">Shop Now</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Item 2 -->
+    <div class="slider-item js-fullheight">
+      <div class="background" style="background-image: url('https://www.cnet.com/a/img/resize/12b8c0e4e1000d971ee523eef1a0fc34cb30be94/hub/2023/07/05/023751fb-769d-4269-bc83-f13adff80033/5g6a9265-edit-copy.jpg?auto=webp&fit=crop&height=675&width=1200'); filter: brightness(25%); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+      <div class="overlay"></div>
+      <div class="container h-100 d-flex align-items-center justify-content-center">
+        <div class="text-center text-light ftco-animate">
+          <span class="subheading"></span>
+          <h1 class="mb-4 mt-3" style="color:white;">Upgrade to the <span>Future</span></h1>
+          <p>Stay ahead with the latest mobile technology and unbeatable prices. Shop the best deals on premium smartphones and accessories.</p>
+          <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Shop Now</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br><br>
+
+<style>
+  .counter-banner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #ffffff;
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 100%;
+      margin: auto;
+      flex-wrap: wrap;
+  }
+
+  .counter-item {
+      flex: 1;
+      min-width: 150px;
+      color: #333;
+  }
+
+  .counter-number {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #2087cc;
+  }
+
+  .counter-label {
+      margin-top: 8px;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #555;
+  }
+
+  @media (max-width: 768px) {
+      .counter-banner {
+          flex-direction: column;
+          gap: 15px;
+      }
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="counter-banner">
+  <div class="counter-item">
+    <i class="fas fa-briefcase" style="font-size: 30px;color: #2087cc;"></i>
+    <div class="counter-number" data-target="5">0</div>
+    <div class="counter-label">Years of Experience</div>
+  </div>
+  <div class="counter-item">
+    <i class="fas fa-building" style="font-size: 30px;color: #2087cc;"></i>
+    <div class="counter-number" data-target="3">0</div>
+    <div class="counter-label">Branches</div>
+  </div>
+  <div class="counter-item">
+    <i class="fas fa-smile" style="font-size: 30px;color: #2087cc;"></i>
+    <div class="counter-number" data-target="1200">0</div>
+    <div class="counter-label">Happy Clients</div>
+  </div>
+  <div class="counter-item">
+    <i class="fas fa-box" style="font-size: 30px;color: #2087cc;"></i>
+    <div class="counter-number" data-target="1200">0</div>
+    <div class="counter-label">Products</div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll('.counter-number');
+
+      counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+          const speed = target / 80;
+
+          const updateCounter = () => {
+              if (count < target) {
+                  count += speed;
+                  counter.innerText = Math.ceil(count);
+                  requestAnimationFrame(updateCounter);
+              } else {
+                  counter.innerText = target;
+              }
+          };
+
+          updateCounter();
+      });
+  });
+</script>
+
+
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('https://www.zdnet.com/a/img/resize/59d9448270bdf9642e4f5f6f323d2a1e94361c3d/2024/02/02/1bfa7d30-112c-4906-83a7-ce12551b7b16/galaxy-s24-ultra.jpg?auto=webp&fit=crop&height=1200&width=1200');">
+      </div>
+      <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+        <div class="heading-section-bold mb-4 mt-md-5">
+          <div class="ml-md-0">
+            <h2 class="mb-4">Discover the Future with Global Mobiles</h2>
+          </div>
+        </div>
+        <div class="pb-md-5">
+          <p>At Global Mobiles, we bring you the latest smartphones, gadgets, and accessories designed to enhance your lifestyle. Experience unparalleled technology and unbeatable service all in one place.</p>
+          <div class="row ftco-services">
+            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services">
+                <div class="icon d-flex justify-content-center align-items-center mb-4">
+                  <span class="flaticon-002-recommended"></span>
+                </div>
+                <div class="media-body">
+                  <h3 class="heading">Exchange Offers</h3>
+                  <p>Trade in your old phone and upgrade to the latest models at unbeatable prices.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services">
+                <div class="icon d-flex justify-content-center align-items-center mb-4">
+                  <span class="flaticon-001-box"></span>
+                </div>
+                <div class="media-body">
+                  <h3 class="heading">Secure Packaging</h3>
+                  <p>Your new smartphone is delivered with care, ensuring it arrives in perfect condition.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services">
+                <div class="icon d-flex justify-content-center align-items-center mb-4">
+                  <span class="flaticon-003-medal"></span>
+                </div>
+                <div class="media-body">
+                  <h3 class="heading">Top Brands</h3>
+                  <p>Choose from a wide range of premium smartphones from the world's leading brands.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <h2 class="mb-3">Our Products</h2>
+        <p></p>
+      </div>
+    </div>    
+  </div>
+  <div class="container">
+    <div class="product-grid">
+      {% for i in products %}
+        <div class="product-item ftco-animate">
+          <a href="/product-single/{{i.slug}}" class="img-prod">
+            <img   src="{{i.image.url}}" style="height: 200px;" alt="{{i.name}}">
+            {% if i.offer_percentage %}
+              <span class="status">{{i.offer_percentage}}% Off</span>
+            {% endif %}
+            <div class="overlay">View More</div>
+          </a>
+          <div class="text p-3 text-center">
+            <h4><a href="/product-single/{{i.slug}}">{{i.name}}</a></h4>
+            <div class="pricing">
+              <p class="price">
+                <span class="price-sale">${{i.price}}</span>
+                {% if i.offerprice %}
+                  <span class="price-dc">${{i.offerprice}}</span>
+                {% endif %}
+              </p>
+            </div>
+            <div class="action-buttons d-flex justify-content-center">
+              <a href="/add_to_cart/{{i.slug}}" style="width:100%;background-color: #fed71a;border-radius:50px;color:black" class="btn btn-primary mr-2">Add to Cart</a>
+              <!-- <a href="/buy_now/{{i.slug}}" class="btn btn-success">Buy Now</a> -->
+            </div>
+            <br>
+            <div>
+            <!-- <button onclick="location.href='/product-single/{{i.slug}}'" style="width:100%;background-color: #fed71a;border-radius:50px;color:black" >View More</button> -->
+          </div>   </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+  }
+  .product-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  .product-item:hover {
+    transform: translateY(-5px);
+  }
+  .img-prod {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  .img-prod img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .img-prod:hover img {
+    transform: scale(1.05);
+  }
+  .status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .img-prod:hover .overlay {
+    opacity: 1;
+  }
+  .text {
+    padding: 15px;
+  }
+  .text h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .pricing .price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .price-sale {
+    color: #2288ca;
+  }
+  .price-dc {
+    text-decoration: line-through;
+    color: grey;
+    margin-left: 5px;
+  }
+  .action-buttons .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+</style>
+
+<!-- 
+
+  <section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Best Sellers</h2>
+                <p>Explore the latest and most popular smartphones at unbeatable prices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+    
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="{% static 'images/mobile-1.jpg' %}" alt="iPhone 15 Pro">
+                        <span class="status">20% Off</span>
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 px-3">
+                        <h3><a href="#">iPhone 15 Pro</a></h3>
+                        <div class="d-flex">
+                            <div class="pricing">
+                                <p class="price">
+                                    <span class="mr-2 price-dc">$1,200.00</span>
+                                    <span class="price-sale">$960.00</span>
+                                </p>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right">
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star-half"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1">
+                                <span>Add to Cart <i class="ion-ios-add ml-1"></i></span>
+                            </a>
+                            <a href="#" class="buy-now text-center py-2">
+                                Buy Now<span><i class="ion-ios-cart ml-1"></i></span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+     
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="{% static 'images/mobile-2.jpg' %}" alt="Samsung Galaxy S23 Ultra">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 px-3">
+                        <h3><a href="#">Samsung Galaxy S23 Ultra</a></h3>
+                        <div class="d-flex">
+                            <div class="pricing">
+                                <p class="price"><span>$1,099.00</span></p>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right">
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1">
+                                <span>Add to Cart <i class="ion-ios-add ml-1"></i></span>
+                            </a>
+                            <a href="#" class="buy-now text-center py-2">
+                                Buy Now<span><i class="ion-ios-cart ml-1"></i></span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="{% static 'images/mobile-3.jpg' %}" alt="OnePlus 11">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 px-3">
+                        <h3><a href="#">OnePlus 11</a></h3>
+                        <div class="d-flex">
+                            <div class="pricing">
+                                <p class="price"><span>$749.00</span></p>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right">
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star-half"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1">
+                                <span>Add to Cart <i class="ion-ios-add ml-1"></i></span>
+                            </a>
+                            <a href="#" class="buy-now text-center py-2">
+                                Buy Now<span><i class="ion-ios-cart ml-1"></i></span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="{% static 'images/mobile-4.jpg' %}"  width="4016" height="6016" alt="Google Pixel 8">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 px-3">
+                        <h3><a href="#">Google Pixel 8</a></h3>
+                        <div class="d-flex">
+                            <div class="pricing">
+                                <p class="price"><span>$899.00</span></p>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right">
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1">
+                                <span>Add to Cart <i class="ion-ios-add ml-1"></i></span>
+                            </a>
+                            <a href="#" class="buy-now text-center py-2">
+                                Buy Now<span><i class="ion-ios-cart ml-1"></i></span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="col-md-8 d-flex align-items-stretch">
+              <div class="img img-2" style="background-image: url('https://www.financialexpress.com/wp-content/uploads/2019/06/smart-phone-ad-1.jpg?w=1024');"></div>
+            
+                
+            </div>
+            <div class="col-md-4 py-md-5 ftco-animate">
+                <div class="text py-3 py-md-5">
+                    <h2 class="mb-4">Latest Smartphone Collection</h2>
+                    <p>Discover the hottest smartphones of 2023! Featuring the latest in technology, sleek designs, and unbeatable prices. Upgrade your gadget today.</p>
+                    <p><a href="#" class="btn btn-white px-4 py-3">Shop Now</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="col-md-5 order-md-last d-flex align-items-stretch">
+              <div class="img img-2" style="background-image: url('https://paytmblogcdn.paytm.com/wp-content/uploads/2024/11/519_GST-on-Mobile-Phones.jpg');"></div>
+            </div>
+            <div class="col-md-7 py-3 py-md-5 ftco-animate">
+                <div class="text text-2 py-md-5">
+                    <h2 class="mb-4">Exclusive Accessories Collection</h2>
+                    <p>Pair your smartphone with premium accessories – cases, chargers, headphones, and more. Designed for style and functionality, all in one place.</p>
+                    <p><a href="#" class="btn btn-white px-4 py-3">Shop Accessories</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   
+
+    <!-- <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url('https://m.economictimes.com/thumb/msid-102947569,width-1600,height-900,resizemode-4,imgsize-44178/best-oneplus-mobiles-under-20000-enjoy-performance-under-budget.jpg');">
+    	<div class="container">
+    		<div class="row justify-content-center py-5">
+    			<div class="col-md-10">
+		    		<div class="row">
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="10000">0</strong>
+		                <span>Happy Customers</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="100">0</strong>
+		                <span>Branches</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="1000">0</strong>
+		                <span>Partner</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="100">0</strong>
+		                <span>Awards</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+            <h2 class="mb-4">Our satisfied customer says</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'images/person_2.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'images/person_3.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		<hr> -->
+
+		<!-- <section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+              <h2>Subscribe </h2>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  {% include 'footer.html' %}
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>
